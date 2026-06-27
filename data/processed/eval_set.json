@@ -1,0 +1,51 @@
+{
+  "description": "Hand-authored evaluation set: colloquial Hebrew questions mapped to ground-truth Kol-Zchut / Bituach Leumi documents (doc_id). A retrieval is a hit when a returned chunk's doc_id is in relevant_doc_ids. 'phrasing_gap' tags how far the query wording is from the source's formal wording (used in error analysis).",
+  "queries": [
+    {"id": "q01", "domain": "unemployment", "phrasing_gap": "high",   "query": "פיטרו אותי מהעבודה, מה מגיע לי?", "relevant_doc_ids": ["kolzchut_2926", "kolzchut_1521", "btl_btl_3"]},
+    {"id": "q02", "domain": "unemployment", "phrasing_gap": "low",    "query": "איך מגישים בקשה לדמי אבטלה?", "relevant_doc_ids": ["kolzchut_7558"]},
+    {"id": "q03", "domain": "unemployment", "phrasing_gap": "high",   "query": "התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?", "relevant_doc_ids": ["kolzchut_13342"]},
+    {"id": "q04", "domain": "unemployment", "phrasing_gap": "medium", "query": "אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?", "relevant_doc_ids": ["kolzchut_17837"]},
+    {"id": "q05", "domain": "unemployment", "phrasing_gap": "medium", "query": "כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?", "relevant_doc_ids": ["kolzchut_2926", "kolzchut_2921"]},
+    {"id": "q06", "domain": "unemployment", "phrasing_gap": "high",   "query": "הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?", "relevant_doc_ids": ["kolzchut_12413"]},
+    {"id": "q07", "domain": "unemployment", "phrasing_gap": "high",   "query": "חייבים להגיע ללשכת התעסוקה כל הזמן?", "relevant_doc_ids": ["kolzchut_1826"]},
+    {"id": "q08", "domain": "unemployment", "phrasing_gap": "high",   "query": "הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?", "relevant_doc_ids": ["kolzchut_1901"]},
+
+    {"id": "q09", "domain": "welfare", "phrasing_gap": "high",   "query": "אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?", "relevant_doc_ids": ["kolzchut_3825", "kolzchut_8912", "btl_btl_5"]},
+    {"id": "q10", "domain": "welfare", "phrasing_gap": "high",   "query": "יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?", "relevant_doc_ids": ["kolzchut_2088", "kolzchut_6119"]},
+    {"id": "q11", "domain": "welfare", "phrasing_gap": "low",    "query": "איך מגישים תביעה לגמלת הבטחת הכנסה?", "relevant_doc_ids": ["kolzchut_9070"]},
+    {"id": "q12", "domain": "welfare", "phrasing_gap": "medium", "query": "יש הנחה בארנונה למקבלי הבטחת הכנסה?", "relevant_doc_ids": ["kolzchut_1767"]},
+    {"id": "q13", "domain": "welfare", "phrasing_gap": "high",   "query": "אני מקבל קצבה, מגיעה לי הנחה בחשמל?", "relevant_doc_ids": ["kolzchut_6910"]},
+    {"id": "q14", "domain": "welfare", "phrasing_gap": "high",   "query": "אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?", "relevant_doc_ids": ["kolzchut_1991"]},
+
+    {"id": "q15", "domain": "disability", "phrasing_gap": "medium", "query": "איך מקבלים קצבת נכות?", "relevant_doc_ids": ["btl_btl_2"]},
+    {"id": "q16", "domain": "disability", "phrasing_gap": "high",   "query": "יש לי נכות, מגיע לי החזר ממס הכנסה?", "relevant_doc_ids": ["kolzchut_10424"]},
+    {"id": "q17", "domain": "disability", "phrasing_gap": "high",   "query": "אפשר לקבל עזרה בחינם בהגשת תביעת נכות?", "relevant_doc_ids": ["kolzchut_11673"]},
+    {"id": "q18", "domain": "disability", "phrasing_gap": "high",   "query": "הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?", "relevant_doc_ids": ["kolzchut_10039", "kolzchut_9989"]},
+    {"id": "q19", "domain": "disability", "phrasing_gap": "high",   "query": "אני חולה סרטן, איך קובעים לי אחוזי נכות?", "relevant_doc_ids": ["kolzchut_10401", "kolzchut_12376"]},
+    {"id": "q20", "domain": "disability", "phrasing_gap": "medium", "query": "יש הנחה בעמלות בבנק לנכים?", "relevant_doc_ids": ["kolzchut_10313"]},
+    {"id": "q21", "domain": "disability", "phrasing_gap": "high",   "query": "רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?", "relevant_doc_ids": ["kolzchut_11933"]},
+
+    {"id": "q22", "domain": "parenting", "phrasing_gap": "high",   "query": "אני בהריון, מותר למעסיק לפטר אותי?", "relevant_doc_ids": ["kolzchut_924"]},
+    {"id": "q23", "domain": "parenting", "phrasing_gap": "medium", "query": "אפשר לפטר אותי בזמן חופשת הלידה?", "relevant_doc_ids": ["kolzchut_6633"]},
+    {"id": "q24", "domain": "parenting", "phrasing_gap": "medium", "query": "אני עוברת טיפולי פוריות, מותר לפטר אותי?", "relevant_doc_ids": ["kolzchut_469"]},
+    {"id": "q25", "domain": "parenting", "phrasing_gap": "medium", "query": "כמה כסף מקבלים על חופשת לידה?", "relevant_doc_ids": ["btl_btl_0"]},
+    {"id": "q26", "domain": "parenting", "phrasing_gap": "high",   "query": "שני גברים בני זוג שרוצים לאמץ ילד", "relevant_doc_ids": ["kolzchut_6358"]},
+    {"id": "q27", "domain": "parenting", "phrasing_gap": "high",   "query": "אבא שהביא ילד דרך פונדקאות בחו\"ל, מגיע לו דמי לידה?", "relevant_doc_ids": ["kolzchut_18939"]},
+
+    {"id": "q28", "domain": "family", "phrasing_gap": "low",    "query": "מה זה אומנה ואיך זה עובד?", "relevant_doc_ids": ["kolzchut_10717"]},
+    {"id": "q29", "domain": "family", "phrasing_gap": "medium", "query": "רוצים לאמץ ילד בארץ, איך מתחילים?", "relevant_doc_ids": ["kolzchut_16106", "kolzchut_6874"]},
+    {"id": "q30", "domain": "family", "phrasing_gap": "medium", "query": "מותר להעסיק נער בעבודת לילה?", "relevant_doc_ids": ["kolzchut_6697"]},
+    {"id": "q31", "domain": "family", "phrasing_gap": "high",   "query": "הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?", "relevant_doc_ids": ["kolzchut_5105"]},
+    {"id": "q32", "domain": "family", "phrasing_gap": "high",   "query": "מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?", "relevant_doc_ids": ["kolzchut_14383"]},
+    {"id": "q33", "domain": "family", "phrasing_gap": "high",   "query": "מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות", "relevant_doc_ids": ["kolzchut_13704"]},
+
+    {"id": "q34", "domain": "health", "phrasing_gap": "low",    "query": "מידע על אוסטאופורוזיס ודלדול עצם", "relevant_doc_ids": ["kolzchut_4454"]},
+    {"id": "q35", "domain": "health", "phrasing_gap": "high",   "query": "יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?", "relevant_doc_ids": ["kolzchut_14454"]},
+    {"id": "q36", "domain": "health", "phrasing_gap": "high",   "query": "אפשר לקבל כיסא גלגלים ומכשירי שיקום?", "relevant_doc_ids": ["kolzchut_20618"]},
+    {"id": "q37", "domain": "health", "phrasing_gap": "high",   "query": "התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?", "relevant_doc_ids": ["kolzchut_11322"]},
+    {"id": "q38", "domain": "health", "phrasing_gap": "high",   "query": "התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן", "relevant_doc_ids": ["kolzchut_7304"]},
+
+    {"id": "q39", "domain": "elderly", "phrasing_gap": "medium", "query": "מאיזה גיל מתחילים לקבל קצבת זקנה?", "relevant_doc_ids": ["btl_btl_4"]},
+    {"id": "q40", "domain": "elderly", "phrasing_gap": "high",   "query": "הגעתי לגיל פרישה ואין לי קצבה, מה עושים?", "relevant_doc_ids": ["kolzchut_19452"]}
+  ]
+}

@@ -60,6 +60,13 @@ plus a hand-authored evaluation set. No Kaggle data, notebooks, or code were use
 a `domain`, and a `phrasing_gap` tag (`low`/`medium`/`high`). Authored manually by reading
 the candidate documents; every `doc_id` is verified to exist in the corpus.
 
+## Train / validation / test split (`eval_split.json`)
+Query-level split (this is retrieval, not row classification): the **corpus is the index**
+(fit without labels); the 40 labeled queries are split **stratified by domain, seed 42** into
+**dev/validation (14)** and **held-out test (26)** via `src/splits.py`. Per-split metrics:
+`results/metrics_by_split.csv`. No hyper-parameters were tuned on the labeled queries, so the
+split is an unbiased robustness check.
+
 ## Reproduction
 
 ```bash

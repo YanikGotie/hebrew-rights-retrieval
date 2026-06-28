@@ -8,7 +8,7 @@ It compares **lexical** retrieval (TF-IDF, BM25), **semantic** retrieval (Hebrew
 sentence embeddings), and a **hybrid** of the two — and asks whether semantics, and then fusion,
 improve finding information across the everyday-language ↔ formal-language gap.
 
-> **Track 3 — Data-Driven NLP** · HIT · Dr. Igor Kleiner · Author: Yanik Gutia (318553526)
+> **Track 3 — Data-Driven NLP** · HIT · Dr. Igor Kleiner · Author: Yanik Gotie (318553526)
 
 ## Research question
 Does sentence-embedding semantic retrieval improve information finding for Hebrew rights
@@ -53,13 +53,18 @@ src/
   build_corpus.py         # merge + chunk -> corpus.jsonl
   retrievers.py           # TF-IDF, BM25, AlephBERT semantic, Hybrid (RRF/weighted)
   evaluate.py             # Recall@k, MRR, nDCG@10, MAP
+  splits.py               # query-level train(index)/validation/test split
+  eval_splits.py          # per-split metrics -> results/metrics_by_split.csv
   error_analysis.py       # >=10 worked examples, lexical vs semantic
+  corpus_stats.py         # classical-NLP stats (tokens, stopwords, TF-IDF, n-grams)
   visualize.py            # 4 figures
   run_all.py              # end-to-end orchestrator
-notebooks/NLP_Project.ipynb
+notebooks/
+  NLP_Project.ipynb           # clean, Colab-ready
+  NLP_Project_Collab_RUN.ipynb# executed run with outputs
 data/{raw,processed}/     # cached pulls + corpus + eval set
-results/                  # generated metrics, figures, error analysis
-reports/                  # report.md (≤5 pp) + slides_outline.md
+results/                  # metrics.csv, per_query.csv, error_analysis.md, figures/
+reports/                  # report.md (≤5 pp) + presentation.pptx
 AI_USAGE.md  REFLECTION.md  ETHICS.md  DATA.md
 ```
 
@@ -69,7 +74,7 @@ AI_USAGE.md  REFLECTION.md  ETHICS.md  DATA.md
 - [x] ≥2 evaluation metrics (Recall@k, MRR, nDCG, MAP)
 - [x] Error analysis (≥10 examples) · ≥2 visualizations (4 figures)
 - [x] AI_USAGE.md · REFLECTION.md · ETHICS.md · DATA.md
-- [x] Report (`reports/report.md`, ≤5 pp) · Slides (`reports/slides_outline.md`)
+- [x] Report (`reports/report.md`, ≤5 pp) · Slides (`reports/presentation.pptx`)
 - [x] No Kaggle; original self-collected Hebrew corpus
 
 ## License / data

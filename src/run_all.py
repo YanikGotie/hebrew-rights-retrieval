@@ -47,8 +47,12 @@ def main(argv):
     print(f"  retrievers: {', '.join(retrievers)}")
 
     print("=" * 70)
-    print("STEP 3/5  Evaluate")
+    print("STEP 3/5  Evaluate (full set + validation/test split)")
     metrics_df, per_query_df = evaluate.run(retrievers)
+    import eval_splits
+    import splits as _splits
+    _splits.make_split()
+    eval_splits.run()
 
     print("=" * 70)
     print("STEP 4/5  Error analysis")

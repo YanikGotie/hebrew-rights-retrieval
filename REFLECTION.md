@@ -45,9 +45,16 @@ I built the whole pipeline end-to-end:
   collapse chunk hits to their parent `doc_id` before scoring, otherwise Recall@k is inflated.
 
 ## What I learned and what surprised me
+* **The biggest surprise: AlephBERT alone lost.** I assumed a Hebrew embedding model would beat
+  TF-IDF, especially on colloquial queries. It didn't — semantic was the *weakest* single model
+  (MRR 0.579 vs TF-IDF 0.618) and even slightly worse on high phrasing-gap queries (R@1 0.44 vs
+  0.48). The reason clicked later: this sentence encoder is derived from a masked LM, not
+  contrastively fine-tuned for retrieval, so its similarities are noisier than a sharp lexical
+  hit in a term-heavy domain corpus.
+* **But the hybrid won decisively** (MRR 0.668, fewest misses), because the two models fail
+  *differently* — fusion recovers the zero-overlap paraphrases lexical misses while keeping
+  lexical precision. "Complementary, not superior" is the real takeaway.
 * How much a *fair baseline* matters: a few dozen stopwords changed the entire narrative.
-* That **hybrid fusion (RRF / weighted)** is a cheap, robust way to get the best of lexical
-  precision and semantic recall — it consistently led on MRR/nDCG in my runs.
 * I was surprised how cleanly the **MediaWiki API** exposes structured text — and how a quiet
   default (`exlimit=1`) can corrupt a dataset with no error at all. I now sanity-check dataset
   sizes as a habit.

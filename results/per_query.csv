@@ -1,0 +1,201 @@
+retriever,qid,domain,phrasing_gap,query,first_hit_rank,reciprocal_rank,top1_doc
+tfidf,q01,unemployment,high,"פיטרו אותי מהעבודה, מה מגיע לי?",,0.0,kolzchut_2088
+tfidf,q02,unemployment,low,איך מגישים בקשה לדמי אבטלה?,4,0.25,kolzchut_2926
+tfidf,q03,unemployment,high,"התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?",,0.0,kolzchut_21223
+tfidf,q04,unemployment,medium,"אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?",2,0.5,kolzchut_2926
+tfidf,q05,unemployment,medium,כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?,1,1.0,kolzchut_2921
+tfidf,q06,unemployment,high,"הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?",1,1.0,kolzchut_12413
+tfidf,q07,unemployment,high,חייבים להגיע ללשכת התעסוקה כל הזמן?,4,0.25,kolzchut_16447
+tfidf,q08,unemployment,high,"הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?",1,1.0,kolzchut_1901
+tfidf,q09,welfare,high,"אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?",9,0.1111,btl_btl_3
+tfidf,q10,welfare,high,"יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?",3,0.3333,kolzchut_3825
+tfidf,q11,welfare,low,איך מגישים תביעה לגמלת הבטחת הכנסה?,2,0.5,btl_btl_3
+tfidf,q12,welfare,medium,יש הנחה בארנונה למקבלי הבטחת הכנסה?,1,1.0,kolzchut_1767
+tfidf,q13,welfare,high,"אני מקבל קצבה, מגיעה לי הנחה בחשמל?",5,0.2,btl_btl_2
+tfidf,q14,welfare,high,"אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?",1,1.0,kolzchut_1991
+tfidf,q15,disability,medium,איך מקבלים קצבת נכות?,,0.0,kolzchut_21223
+tfidf,q16,disability,high,"יש לי נכות, מגיע לי החזר ממס הכנסה?",1,1.0,kolzchut_10424
+tfidf,q17,disability,high,אפשר לקבל עזרה בחינם בהגשת תביעת נכות?,1,1.0,kolzchut_11673
+tfidf,q18,disability,high,"הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?",4,0.25,kolzchut_10937
+tfidf,q19,disability,high,"אני חולה סרטן, איך קובעים לי אחוזי נכות?",,0.0,kolzchut_10891
+tfidf,q20,disability,medium,יש הנחה בעמלות בבנק לנכים?,1,1.0,kolzchut_10313
+tfidf,q21,disability,high,"רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?",1,1.0,kolzchut_11933
+tfidf,q22,parenting,high,"אני בהריון, מותר למעסיק לפטר אותי?",,0.0,kolzchut_2647
+tfidf,q23,parenting,medium,אפשר לפטר אותי בזמן חופשת הלידה?,2,0.5,kolzchut_2645
+tfidf,q24,parenting,medium,"אני עוברת טיפולי פוריות, מותר לפטר אותי?",2,0.5,kolzchut_16566
+tfidf,q25,parenting,medium,כמה כסף מקבלים על חופשת לידה?,,0.0,kolzchut_2647
+tfidf,q26,parenting,high,שני גברים בני זוג שרוצים לאמץ ילד,2,0.5,kolzchut_16106
+tfidf,q27,parenting,high,"אבא שהביא ילד דרך פונדקאות בחו""ל, מגיע לו דמי לידה?",1,1.0,kolzchut_18939
+tfidf,q28,family,low,מה זה אומנה ואיך זה עובד?,2,0.5,kolzchut_13642
+tfidf,q29,family,medium,"רוצים לאמץ ילד בארץ, איך מתחילים?",1,1.0,kolzchut_16106
+tfidf,q30,family,medium,מותר להעסיק נער בעבודת לילה?,1,1.0,kolzchut_6697
+tfidf,q31,family,high,"הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?",1,1.0,kolzchut_5105
+tfidf,q32,family,high,מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?,3,0.3333,kolzchut_14977
+tfidf,q33,family,high,מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות,1,1.0,kolzchut_13704
+tfidf,q34,health,low,מידע על אוסטאופורוזיס ודלדול עצם,1,1.0,kolzchut_4454
+tfidf,q35,health,high,"יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?",1,1.0,kolzchut_14454
+tfidf,q36,health,high,אפשר לקבל כיסא גלגלים ומכשירי שיקום?,1,1.0,kolzchut_20618
+tfidf,q37,health,high,"התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?",2,0.5,kolzchut_11924
+tfidf,q38,health,high,"התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן",1,1.0,kolzchut_7304
+tfidf,q39,elderly,medium,מאיזה גיל מתחילים לקבל קצבת זקנה?,1,1.0,btl_btl_4
+tfidf,q40,elderly,high,"הגעתי לגיל פרישה ואין לי קצבה, מה עושים?",2,0.5,kolzchut_2088
+semantic,q01,unemployment,high,"פיטרו אותי מהעבודה, מה מגיע לי?",1,1.0,kolzchut_1521
+semantic,q02,unemployment,low,איך מגישים בקשה לדמי אבטלה?,6,0.1667,btl_btl_3
+semantic,q03,unemployment,high,"התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?",,0.0,kolzchut_1521
+semantic,q04,unemployment,medium,"אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?",2,0.5,kolzchut_1521
+semantic,q05,unemployment,medium,כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?,,0.0,kolzchut_2925
+semantic,q06,unemployment,high,"הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?",1,1.0,kolzchut_12413
+semantic,q07,unemployment,high,חייבים להגיע ללשכת התעסוקה כל הזמן?,1,1.0,kolzchut_1826
+semantic,q08,unemployment,high,"הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?",1,1.0,kolzchut_1901
+semantic,q09,welfare,high,"אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?",1,1.0,btl_btl_5
+semantic,q10,welfare,high,"יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?",3,0.3333,btl_btl_5
+semantic,q11,welfare,low,איך מגישים תביעה לגמלת הבטחת הכנסה?,1,1.0,kolzchut_9070
+semantic,q12,welfare,medium,יש הנחה בארנונה למקבלי הבטחת הכנסה?,1,1.0,kolzchut_1767
+semantic,q13,welfare,high,"אני מקבל קצבה, מגיעה לי הנחה בחשמל?",9,0.1111,kolzchut_1521
+semantic,q14,welfare,high,"אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?",3,0.3333,kolzchut_6910
+semantic,q15,disability,medium,איך מקבלים קצבת נכות?,,0.0,kolzchut_10891
+semantic,q16,disability,high,"יש לי נכות, מגיע לי החזר ממס הכנסה?",1,1.0,kolzchut_10424
+semantic,q17,disability,high,אפשר לקבל עזרה בחינם בהגשת תביעת נכות?,1,1.0,kolzchut_11673
+semantic,q18,disability,high,"הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?",2,0.5,kolzchut_10422
+semantic,q19,disability,high,"אני חולה סרטן, איך קובעים לי אחוזי נכות?",,0.0,kolzchut_10891
+semantic,q20,disability,medium,יש הנחה בעמלות בבנק לנכים?,1,1.0,kolzchut_10313
+semantic,q21,disability,high,"רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?",1,1.0,kolzchut_11933
+semantic,q22,parenting,high,"אני בהריון, מותר למעסיק לפטר אותי?",,0.0,kolzchut_6633
+semantic,q23,parenting,medium,אפשר לפטר אותי בזמן חופשת הלידה?,3,0.3333,kolzchut_2645
+semantic,q24,parenting,medium,"אני עוברת טיפולי פוריות, מותר לפטר אותי?",1,1.0,kolzchut_469
+semantic,q25,parenting,medium,כמה כסף מקבלים על חופשת לידה?,,0.0,btl_btl_1
+semantic,q26,parenting,high,שני גברים בני זוג שרוצים לאמץ ילד,3,0.3333,kolzchut_16106
+semantic,q27,parenting,high,"אבא שהביא ילד דרך פונדקאות בחו""ל, מגיע לו דמי לידה?",2,0.5,kolzchut_20449
+semantic,q28,family,low,מה זה אומנה ואיך זה עובד?,5,0.2,kolzchut_14980
+semantic,q29,family,medium,"רוצים לאמץ ילד בארץ, איך מתחילים?",1,1.0,kolzchut_16106
+semantic,q30,family,medium,מותר להעסיק נער בעבודת לילה?,1,1.0,kolzchut_6697
+semantic,q31,family,high,"הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?",2,0.5,kolzchut_13255
+semantic,q32,family,high,מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?,1,1.0,kolzchut_14383
+semantic,q33,family,high,מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות,1,1.0,kolzchut_13704
+semantic,q34,health,low,מידע על אוסטאופורוזיס ודלדול עצם,1,1.0,kolzchut_4454
+semantic,q35,health,high,"יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?",3,0.3333,kolzchut_14980
+semantic,q36,health,high,אפשר לקבל כיסא גלגלים ומכשירי שיקום?,,0.0,kolzchut_4745
+semantic,q37,health,high,"התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?",,0.0,kolzchut_10946
+semantic,q38,health,high,"התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן",1,1.0,kolzchut_7304
+semantic,q39,elderly,medium,מאיזה גיל מתחילים לקבל קצבת זקנה?,1,1.0,btl_btl_4
+semantic,q40,elderly,high,"הגעתי לגיל פרישה ואין לי קצבה, מה עושים?",,0.0,kolzchut_11195
+bm25,q01,unemployment,high,"פיטרו אותי מהעבודה, מה מגיע לי?",,0.0,kolzchut_2088
+bm25,q02,unemployment,low,איך מגישים בקשה לדמי אבטלה?,7,0.1429,btl_btl_3
+bm25,q03,unemployment,high,"התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?",,0.0,kolzchut_1896
+bm25,q04,unemployment,medium,"אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?",1,1.0,kolzchut_17837
+bm25,q05,unemployment,medium,כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?,2,0.5,btl_btl_3
+bm25,q06,unemployment,high,"הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?",5,0.2,kolzchut_14977
+bm25,q07,unemployment,high,חייבים להגיע ללשכת התעסוקה כל הזמן?,5,0.2,kolzchut_14001
+bm25,q08,unemployment,high,"הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?",1,1.0,kolzchut_1901
+bm25,q09,welfare,high,"אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?",1,1.0,kolzchut_3825
+bm25,q10,welfare,high,"יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?",6,0.1667,kolzchut_19661
+bm25,q11,welfare,low,איך מגישים תביעה לגמלת הבטחת הכנסה?,5,0.2,kolzchut_16447
+bm25,q12,welfare,medium,יש הנחה בארנונה למקבלי הבטחת הכנסה?,1,1.0,kolzchut_1767
+bm25,q13,welfare,high,"אני מקבל קצבה, מגיעה לי הנחה בחשמל?",5,0.2,kolzchut_14980
+bm25,q14,welfare,high,"אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?",1,1.0,kolzchut_1991
+bm25,q15,disability,medium,איך מקבלים קצבת נכות?,,0.0,kolzchut_21223
+bm25,q16,disability,high,"יש לי נכות, מגיע לי החזר ממס הכנסה?",1,1.0,kolzchut_10424
+bm25,q17,disability,high,אפשר לקבל עזרה בחינם בהגשת תביעת נכות?,1,1.0,kolzchut_11673
+bm25,q18,disability,high,"הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?",2,0.5,kolzchut_14977
+bm25,q19,disability,high,"אני חולה סרטן, איך קובעים לי אחוזי נכות?",4,0.25,kolzchut_10891
+bm25,q20,disability,medium,יש הנחה בעמלות בבנק לנכים?,1,1.0,kolzchut_10313
+bm25,q21,disability,high,"רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?",1,1.0,kolzchut_11933
+bm25,q22,parenting,high,"אני בהריון, מותר למעסיק לפטר אותי?",,0.0,kolzchut_6633
+bm25,q23,parenting,medium,אפשר לפטר אותי בזמן חופשת הלידה?,1,1.0,kolzchut_6633
+bm25,q24,parenting,medium,"אני עוברת טיפולי פוריות, מותר לפטר אותי?",2,0.5,kolzchut_16566
+bm25,q25,parenting,medium,כמה כסף מקבלים על חופשת לידה?,,0.0,kolzchut_2647
+bm25,q26,parenting,high,שני גברים בני זוג שרוצים לאמץ ילד,3,0.3333,kolzchut_16106
+bm25,q27,parenting,high,"אבא שהביא ילד דרך פונדקאות בחו""ל, מגיע לו דמי לידה?",1,1.0,kolzchut_18939
+bm25,q28,family,low,מה זה אומנה ואיך זה עובד?,5,0.2,kolzchut_10730
+bm25,q29,family,medium,"רוצים לאמץ ילד בארץ, איך מתחילים?",1,1.0,kolzchut_16106
+bm25,q30,family,medium,מותר להעסיק נער בעבודת לילה?,1,1.0,kolzchut_6697
+bm25,q31,family,high,"הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?",1,1.0,kolzchut_5105
+bm25,q32,family,high,מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?,4,0.25,kolzchut_14977
+bm25,q33,family,high,מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות,1,1.0,kolzchut_13704
+bm25,q34,health,low,מידע על אוסטאופורוזיס ודלדול עצם,1,1.0,kolzchut_4454
+bm25,q35,health,high,"יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?",3,0.3333,kolzchut_14980
+bm25,q36,health,high,אפשר לקבל כיסא גלגלים ומכשירי שיקום?,1,1.0,kolzchut_20618
+bm25,q37,health,high,"התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?",1,1.0,kolzchut_11322
+bm25,q38,health,high,"התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן",1,1.0,kolzchut_7304
+bm25,q39,elderly,medium,מאיזה גיל מתחילים לקבל קצבת זקנה?,1,1.0,btl_btl_4
+bm25,q40,elderly,high,"הגעתי לגיל פרישה ואין לי קצבה, מה עושים?",2,0.5,kolzchut_2088
+hybrid_rrf,q01,unemployment,high,"פיטרו אותי מהעבודה, מה מגיע לי?",4,0.25,kolzchut_14977
+hybrid_rrf,q02,unemployment,low,איך מגישים בקשה לדמי אבטלה?,3,0.3333,kolzchut_14103
+hybrid_rrf,q03,unemployment,high,"התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?",,0.0,btl_btl_3
+hybrid_rrf,q04,unemployment,medium,"אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?",1,1.0,kolzchut_17837
+hybrid_rrf,q05,unemployment,medium,כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?,,0.0,kolzchut_17837
+hybrid_rrf,q06,unemployment,high,"הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?",1,1.0,kolzchut_12413
+hybrid_rrf,q07,unemployment,high,חייבים להגיע ללשכת התעסוקה כל הזמן?,1,1.0,kolzchut_1826
+hybrid_rrf,q08,unemployment,high,"הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?",1,1.0,kolzchut_1901
+hybrid_rrf,q09,welfare,high,"אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?",4,0.25,btl_btl_3
+hybrid_rrf,q10,welfare,high,"יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?",2,0.5,kolzchut_1852
+hybrid_rrf,q11,welfare,low,איך מגישים תביעה לגמלת הבטחת הכנסה?,1,1.0,kolzchut_9070
+hybrid_rrf,q12,welfare,medium,יש הנחה בארנונה למקבלי הבטחת הכנסה?,1,1.0,kolzchut_1767
+hybrid_rrf,q13,welfare,high,"אני מקבל קצבה, מגיעה לי הנחה בחשמל?",7,0.1429,kolzchut_4934
+hybrid_rrf,q14,welfare,high,"אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?",1,1.0,kolzchut_1991
+hybrid_rrf,q15,disability,medium,איך מקבלים קצבת נכות?,9,0.1111,kolzchut_21223
+hybrid_rrf,q16,disability,high,"יש לי נכות, מגיע לי החזר ממס הכנסה?",1,1.0,kolzchut_10424
+hybrid_rrf,q17,disability,high,אפשר לקבל עזרה בחינם בהגשת תביעת נכות?,1,1.0,kolzchut_11673
+hybrid_rrf,q18,disability,high,"הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?",2,0.5,kolzchut_10422
+hybrid_rrf,q19,disability,high,"אני חולה סרטן, איך קובעים לי אחוזי נכות?",,0.0,kolzchut_10891
+hybrid_rrf,q20,disability,medium,יש הנחה בעמלות בבנק לנכים?,1,1.0,kolzchut_10313
+hybrid_rrf,q21,disability,high,"רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?",1,1.0,kolzchut_11933
+hybrid_rrf,q22,parenting,high,"אני בהריון, מותר למעסיק לפטר אותי?",,0.0,kolzchut_6633
+hybrid_rrf,q23,parenting,medium,אפשר לפטר אותי בזמן חופשת הלידה?,2,0.5,kolzchut_2645
+hybrid_rrf,q24,parenting,medium,"אני עוברת טיפולי פוריות, מותר לפטר אותי?",1,1.0,kolzchut_469
+hybrid_rrf,q25,parenting,medium,כמה כסף מקבלים על חופשת לידה?,,0.0,kolzchut_21663
+hybrid_rrf,q26,parenting,high,שני גברים בני זוג שרוצים לאמץ ילד,2,0.5,kolzchut_16106
+hybrid_rrf,q27,parenting,high,"אבא שהביא ילד דרך פונדקאות בחו""ל, מגיע לו דמי לידה?",1,1.0,kolzchut_18939
+hybrid_rrf,q28,family,low,מה זה אומנה ואיך זה עובד?,1,1.0,kolzchut_10717
+hybrid_rrf,q29,family,medium,"רוצים לאמץ ילד בארץ, איך מתחילים?",1,1.0,kolzchut_16106
+hybrid_rrf,q30,family,medium,מותר להעסיק נער בעבודת לילה?,1,1.0,kolzchut_6697
+hybrid_rrf,q31,family,high,"הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?",1,1.0,kolzchut_5105
+hybrid_rrf,q32,family,high,מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?,2,0.5,kolzchut_14977
+hybrid_rrf,q33,family,high,מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות,1,1.0,kolzchut_13704
+hybrid_rrf,q34,health,low,מידע על אוסטאופורוזיס ודלדול עצם,1,1.0,kolzchut_4454
+hybrid_rrf,q35,health,high,"יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?",2,0.5,kolzchut_14980
+hybrid_rrf,q36,health,high,אפשר לקבל כיסא גלגלים ומכשירי שיקום?,8,0.125,kolzchut_14980
+hybrid_rrf,q37,health,high,"התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?",2,0.5,kolzchut_246
+hybrid_rrf,q38,health,high,"התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן",1,1.0,kolzchut_7304
+hybrid_rrf,q39,elderly,medium,מאיזה גיל מתחילים לקבל קצבת זקנה?,1,1.0,btl_btl_4
+hybrid_rrf,q40,elderly,high,"הגעתי לגיל פרישה ואין לי קצבה, מה עושים?",1,1.0,kolzchut_19452
+hybrid_weighted,q01,unemployment,high,"פיטרו אותי מהעבודה, מה מגיע לי?",2,0.5,kolzchut_2088
+hybrid_weighted,q02,unemployment,low,איך מגישים בקשה לדמי אבטלה?,5,0.2,kolzchut_2926
+hybrid_weighted,q03,unemployment,high,"התפטרתי כי עברתי דירה רחוק, אקבל דמי אבטלה?",,0.0,kolzchut_1521
+hybrid_weighted,q04,unemployment,medium,"אני עצמאי וסגרתי את העסק, מגיע לי אבטלה?",1,1.0,kolzchut_17837
+hybrid_weighted,q05,unemployment,medium,כמה חודשים צריך לעבוד כדי לקבל דמי אבטלה?,7,0.1429,btl_btl_3
+hybrid_weighted,q06,unemployment,high,"הוציאו אותי לחופשה בלי משכורת, יש לי זכויות?",1,1.0,kolzchut_12413
+hybrid_weighted,q07,unemployment,high,חייבים להגיע ללשכת התעסוקה כל הזמן?,1,1.0,kolzchut_1826
+hybrid_weighted,q08,unemployment,high,"הציעו לי עבודה שלא מתאימה לי, מותר לי לסרב?",1,1.0,kolzchut_1901
+hybrid_weighted,q09,welfare,high,"אין לי הכנסה בכלל, איזו קצבה אפשר לקבל?",2,0.5,btl_btl_3
+hybrid_weighted,q10,welfare,high,"יש לי אוטו, זה פוסל אותי מהבטחת הכנסה?",5,0.2,kolzchut_3825
+hybrid_weighted,q11,welfare,low,איך מגישים תביעה לגמלת הבטחת הכנסה?,1,1.0,kolzchut_9070
+hybrid_weighted,q12,welfare,medium,יש הנחה בארנונה למקבלי הבטחת הכנסה?,1,1.0,kolzchut_1767
+hybrid_weighted,q13,welfare,high,"אני מקבל קצבה, מגיעה לי הנחה בחשמל?",,0.0,kolzchut_1521
+hybrid_weighted,q14,welfare,high,"אני אבא יחיד, מגיע לי מענק על הלימודים של הילדים?",1,1.0,kolzchut_1991
+hybrid_weighted,q15,disability,medium,איך מקבלים קצבת נכות?,,0.0,kolzchut_21223
+hybrid_weighted,q16,disability,high,"יש לי נכות, מגיע לי החזר ממס הכנסה?",1,1.0,kolzchut_10424
+hybrid_weighted,q17,disability,high,אפשר לקבל עזרה בחינם בהגשת תביעת נכות?,1,1.0,kolzchut_11673
+hybrid_weighted,q18,disability,high,"הבן שלי נכה, יש ועדה רפואית מיוחדת לילדים?",2,0.5,kolzchut_10422
+hybrid_weighted,q19,disability,high,"אני חולה סרטן, איך קובעים לי אחוזי נכות?",,0.0,kolzchut_10891
+hybrid_weighted,q20,disability,medium,יש הנחה בעמלות בבנק לנכים?,1,1.0,kolzchut_10313
+hybrid_weighted,q21,disability,high,"רוצה למשוך כסף מקופת גמל, יש פטור ממס בגלל נכות?",1,1.0,kolzchut_11933
+hybrid_weighted,q22,parenting,high,"אני בהריון, מותר למעסיק לפטר אותי?",,0.0,kolzchut_6633
+hybrid_weighted,q23,parenting,medium,אפשר לפטר אותי בזמן חופשת הלידה?,2,0.5,kolzchut_2645
+hybrid_weighted,q24,parenting,medium,"אני עוברת טיפולי פוריות, מותר לפטר אותי?",1,1.0,kolzchut_469
+hybrid_weighted,q25,parenting,medium,כמה כסף מקבלים על חופשת לידה?,,0.0,btl_btl_1
+hybrid_weighted,q26,parenting,high,שני גברים בני זוג שרוצים לאמץ ילד,2,0.5,kolzchut_16106
+hybrid_weighted,q27,parenting,high,"אבא שהביא ילד דרך פונדקאות בחו""ל, מגיע לו דמי לידה?",1,1.0,kolzchut_18939
+hybrid_weighted,q28,family,low,מה זה אומנה ואיך זה עובד?,1,1.0,kolzchut_10717
+hybrid_weighted,q29,family,medium,"רוצים לאמץ ילד בארץ, איך מתחילים?",1,1.0,kolzchut_16106
+hybrid_weighted,q30,family,medium,מותר להעסיק נער בעבודת לילה?,1,1.0,kolzchut_6697
+hybrid_weighted,q31,family,high,"הילד שלי מתחיל בית ספר, איך בודקים אם הוא בשל לכיתה א'?",1,1.0,kolzchut_5105
+hybrid_weighted,q32,family,high,מגיעה סייעת נוספת בגן לילדים בגיל שלוש וארבע?,3,0.3333,kolzchut_14977
+hybrid_weighted,q33,family,high,מישהו הפיץ תמונות אינטימיות שלי ברשת בלי רשות,1,1.0,kolzchut_13704
+hybrid_weighted,q34,health,low,מידע על אוסטאופורוזיס ודלדול עצם,1,1.0,kolzchut_4454
+hybrid_weighted,q35,health,high,"יש לי תו חניה לנכה, זה מוזיל את אגרת הרכב?",3,0.3333,kolzchut_14980
+hybrid_weighted,q36,health,high,אפשר לקבל כיסא גלגלים ומכשירי שיקום?,6,0.1667,kolzchut_14980
+hybrid_weighted,q37,health,high,"התינוק שלי מתעכב בהתפתחות, לאן פונים לאבחון?",4,0.25,kolzchut_246
+hybrid_weighted,q38,health,high,"התרופה שאני צריך לא נמצאת בסל, ואני חולה סרטן",1,1.0,kolzchut_7304
+hybrid_weighted,q39,elderly,medium,מאיזה גיל מתחילים לקבל קצבת זקנה?,1,1.0,btl_btl_4
+hybrid_weighted,q40,elderly,high,"הגעתי לגיל פרישה ואין לי קצבה, מה עושים?",1,1.0,kolzchut_19452

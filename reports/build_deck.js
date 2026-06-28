@@ -26,6 +26,32 @@ const W = 13.333, H = 7.5;
 
 const shS = () => ({ type: "outer", color: "000000", blur: 6, offset: 2, angle: 90, opacity: 0.12 });
 
+// Presenter (speaker) notes — Hebrew, one per slide, in slide order.
+const DECK = [];
+const NOTES = [
+/*1  title*/      "פתיחה: הציגו את עצמכם ואת הנושא במשפט — מערכת אחזור מידע בעברית שמגשרת בין שפת היומיום של אזרחים לבין הניסוח הרשמי של זכויות. שאלת-העל: האם חיפוש מבוסס-משמעות מנצח חיפוש מבוסס-מילים, והאם שילוב מנצח את שניהם. מסלול 3 — פרויקט מונחה-נתונים.",
+/*2  problem*/    "הסבירו את הפער: אזרח כותב ”פיטרו אותי, מה מגיע לי?“ אך הדף נקרא ”זכאות לדמי אבטלה“ — לרוב אפס מילים משותפות. כאן בדיוק חיפוש מילולי נכשל. זו בעיה חברתית אמיתית: זכויות לא ממומשות כי אנשים לא מוצאים את המידע.",
+/*3  RQ*/         "שתי השערות: H1 — הסמנטי (AlephBERT) ינצח את הלקסיקלי, במיוחד בשאלות מנוסחות-רחוק. H2 — שילוב ינצח את שניהם. ספוילר: H2 התאשרה, H1 נדחתה — והניגוד הזה הוא הממצא המעניין של הפרויקט.",
+/*4  pipeline*/   "סקירת ה-Pipeline המלא (דרישת מסלול 3): איסוף ← עיבוד מקדים ← אינדוקס ← שילוב ← הערכה. הכול רץ בפקודה אחת וניתן לשחזור מלא. הקריאה היא מימין לשמאל — איסוף ראשון.",
+/*5  data*/       "קורפוס שנאסף עצמאית (ללא Kaggle): 296 מסמכים, 1,602 פסקאות. מקור עיקרי — כל-זכות דרך MediaWiki API (טקסט נקי, רישיון CC-BY-SA); משלים — ביטוח לאומי. סט הערכה: 40 שאלות יומיומיות שכתבנו ידנית עם מסמכי אמת. הזכירו שכיבדנו robots.txt.",
+/*6  prep1*/      "כאן ה-NLP הבסיסי שנלמד בקורס: נרמול (הסרת ניקוד, פיסוק), טוקניזציה, והסרת 94 מילות עצירה. דוגמה: פסקה של 33 טוקנים יורדת ל-26 טוקני תוכן. זה הזרם שמזין את המודלים הלקסיקליים.",
+/*7  tfidf*/      "הקורפוס הופך למטריצת מסמך-מונח בגודל 1,602×20,981, דלילה ב-99.58%. מימין — דוגמה לפסקה כוקטור דליל: רק מספר מונחים מקבלים משקל. הדירוג מחושב כדמיון קוסינוס בין וקטור השאילתה לפסקאות. זהו ה-baseline הלקסיקלי.",
+/*8  morph*/      "אתגר העברית: מיליות (ב/ל/מ/ה/ו/ש/כ) נדבקות למילים ומנפחות את אוצר המילים. ניסוי הסרת תחילית מצמצם 13,415→8,963 סוגי מילים (−33%). זה מסביר למה הלקסיקלי מתקשה; למטיזציה מלאה היא עבודה עתידית.",
+/*9  models*/     "חמישה מאחזרים בממשק אחד: TF-IDF ו-BM25 (לקסיקליים), AlephBERT (סמנטי), ושני היברידים — RRF ומשוקלל. ההנחיות דרשו לפחות שתי גישות; לנו יש חמש.",
+/*10 demo*/       "הדגמה חיה על שאלה אחת. ”פיטרו אותי“: הלקסיקלי מחמיץ לגמרי (אפס מילים משותפות), הסמנטי מדרג ”דמי אבטלה“ ראשון. שימו לב להגינות — ההיברידי כאן רק במקום 4. הוא לא תמיד ראשון לכל שאלה; יתרונו הוא במצטבר. (תשובה מצוינת לשאלת הגנה.)",
+/*11 fusion*/     "RRF — נוסחה מבוססת-דירוג, ללא צורך בכיול ציונים, ולכן יציבה. המדדים: Recall@k (האם יש תשובה ב-top-k), MRR (דירוג התשובה הנכונה הראשונה), nDCG ו-MAP. המדידה היא ברמת המסמך — פסקה נחשבת עבור הדף שלה.",
+/*12 split*/      "השקופית שעונה על ”איפה החלוקה לטסט/ולידציה“: זו בעיית אחזור ולכן החלוקה ברמת השאילתה. הקורפוס משמש כאינדקס (ללא תוויות); 40 השאלות מחולקות dev=14 / test=26, stratified לפי תחום, seed 42. לא כיווננו על השאלות ⇒ הטסט בלתי-מוטה. על הטסט המוחזק ההיברידי מוביל (MRR 0.690).",
+/*13 results*/    "הטבלה והגרף: Hybrid-RRF מוביל בכל מדדי הדירוג (MRR 0.668, nDCG 0.704, MAP 0.652). שימו לב ש-AlephBERT לבדו (בכתום) הוא דווקא המודל החלש ביותר.",
+/*14 finding*/    "שני משפטים: H1 נדחתה — הסמנטי לבדו הכי חלש ואינו מנצח אפילו בשאלות עם פער-ניסוח גבוה. H2 אושרה — ההיברידי מוביל. מדוע? המודלים טועים במקומות שונים, והשילוב משלים. המסר: משלימים, לא עדיפים.",
+/*15 gap*/        "עקומת Recall@k וטבלת Recall@1 לפי פער-ניסוח. הנקודה: אפילו בפער גבוה הסמנטי אינו מקדים (0.44 מול 0.48) — מפריך את האינטואיציה. הסיבה: AlephBERT אינו מכוונן-אחזור (נגזר מ-masked-LM).",
+/*16 heatmap*/    "כל שורה היא שאלה; הצבע = דירוג התשובה הנכונה הראשונה. ירוקים ואפורים מתחלפים בין העמודות — המודלים נכשלים בשאלות שונות. אי-ההסכמה הזו היא בדיוק מה שהופך את השילוב למשתלם. החטאות: TF-IDF 6, AlephBERT 9, היברידי 5.",
+/*17 errors*/     "ניתוח שגיאות (דרישה: ≥10 דוגמאות; לנו 16): שלוש תבניות — A הסמנטי מנצח (סינונימיה/פער-ניסוח), B הלקסיקלי מנצח (מונח מדויק וחד), C שניהם נכשלים (כיסוי דל/אמביגואיות). הציגו דוגמה אחת מכל תבנית.",
+/*18 tsne*/       "מרחב ההטמעות של AlephBERT בהיטל דו-ממדי: התחומים יוצרים אשכולות — המודל אכן לוכד משמעות נושאית — אך האשכולות חופפים, ולכן דירוג עדין עדיין זקוק לאות הלקסיקלי. זה ממחיש למה השילוב עוזר.",
+/*19 concl*/      "מסקנות: בנינו צינור IR עברי מלא וניתן לשחזור; ההיברידי הוא ההמלצה המעשית; מודל עברי מהמדף אינו ניצחון חינם לאחזור — אלא משלים. המשך: מודל מכוון-אחזור (E5), למטיזציה עברית, וסט הערכה גדול ומדורג יותר.",
+/*20 ethics*/     "אתיקה: נתונים ציבוריים ומורשים (CC-BY-SA), ללא מידע אישי; המערכת אינה ייעוץ משפטי — אב-טיפוס מחקרי שחייב להפנות לרשות; הטיות אפשריות וכיסוי מוגבל לשישה תחומים; סט הערכה קטן (מצביע ולא מובהק).",
+/*21 closing*/    "סיכום ותודה. גילוי נאות: נעשה שימוש בעוזר AI ככלי לכתיבת קוד בלבד; תכנון המחקר, הנתונים, סט ההערכה והמסקנות הם שלי, וכל הקוד נבדק והובן. הזמינו שאלות להגנה.",
+];
+
 // ---------- RTL mirror wrappers ----------
 // Only the x-position is mirrored (so the layout reads right-to-left). Text
 // alignment is NOT flipped: Hebrew defaults to right-aligned + paragraph rtl=1.
@@ -96,6 +122,7 @@ function content(kicker, title) {
   s.background = { color: PAPER };
   header(s, kicker, title);
   PN++; pageNum(s, PN);
+  DECK.push(s);
   return s;
 }
 
@@ -106,6 +133,7 @@ async function build() {
   {
     const s = pres.addSlide();
     s.background = { color: INK };
+    DECK.push(s);
     for (let i = 0; i < 4; i++) {
       const r = 1.2 + i * 1.0;
       SH(s, pres.shapes.OVAL, { x: 10.6 - r / 2, y: 5.4 - r / 2, w: r, h: r, fill: { type: "none" }, line: { color: TEALLT, width: 1, transparency: 55 } });
@@ -154,6 +182,7 @@ async function build() {
   {
     const s = pres.addSlide();
     s.background = { color: INK2 };
+    DECK.push(s);
     motif(s, 0.62, 0.55, 1, TEALLT);
     T(s, "שאלת המחקר", { x: 1.08, y: 0.5, w: 10, h: 0.3, fontFace: FB, fontSize: 12.5, bold: true, color: TEALLT, margin: 0 });
     T(s, "האם אחזור מבוסס-משמעות עוזר — והאם שילובו עם חיפוש מילים עוזר יותר?",
@@ -466,6 +495,7 @@ async function build() {
   {
     const s = pres.addSlide();
     s.background = { color: INK };
+    DECK.push(s);
     motif(s, 0.62, 0.55, 1, TEALLT);
     T(s, "הממצא", { x: 1.08, y: 0.5, w: 10, h: 0.3, fontFace: FB, fontSize: 12.5, bold: true, color: TEALLT, margin: 0 });
     T(s, "הסמנטי לבדו הפסיד. ההיברידי ניצח.", { x: 0.6, y: 0.95, w: 12, h: 0.8, fontFace: FH, fontSize: 30, bold: true, color: PAPER, margin: 0 });
@@ -567,6 +597,7 @@ async function build() {
   {
     const s = pres.addSlide();
     s.background = { color: INK };
+    DECK.push(s);
     motif(s, 0.62, 0.55, 1, TEALLT);
     T(s, "מסקנות", { x: 1.08, y: 0.5, w: 10, h: 0.3, fontFace: FB, fontSize: 12.5, bold: true, color: TEALLT, margin: 0 });
     T(s, "מה הפרויקט מראה", { x: 0.6, y: 0.95, w: 12, h: 0.7, fontFace: FH, fontSize: 30, bold: true, color: PAPER, margin: 0 });
@@ -613,6 +644,7 @@ async function build() {
   {
     const s = pres.addSlide();
     s.background = { color: INK };
+    DECK.push(s);
     for (let i = 0; i < 4; i++) {
       const r = 1.2 + i * 1.0;
       SH(s, pres.shapes.OVAL, { x: 2.0 - r / 2, y: 6.0 - r / 2, w: r, h: r, fill: { type: "none" }, line: { color: TEALLT, width: 1, transparency: 60 } });
@@ -632,7 +664,11 @@ async function build() {
       { x: 1.15, y: 5.78, w: 10.4, h: 0.6, fontFace: FB, fontSize: 12.5, color: "CFE6E4", lineSpacingMultiple: 1.1, align: "right", margin: 0 });
   }
 
+  // Attach Hebrew presenter notes (presenter-only, not on the slide body).
+  DECK.forEach((s, i) => { if (NOTES[i]) s.addNotes(NOTES[i]); });
+  if (DECK.length !== NOTES.length) console.warn(`! slides=${DECK.length} notes=${NOTES.length}`);
+
   await pres.writeFile({ fileName: "reports/presentation.pptx" });
-  console.log("wrote reports/presentation.pptx (Hebrew RTL)");
+  console.log(`wrote reports/presentation.pptx (Hebrew RTL, ${DECK.length} slides, ${NOTES.length} notes)`);
 }
 build().catch(e => { console.error(e); process.exit(1); });

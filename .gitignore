@@ -14,3 +14,7 @@ data/processed/emb_alephbert_ids.json
 
 # Keep: data/raw/*.json (the pinned corpus snapshot), corpus.jsonl, eval_set.json,
 # and results/ outputs are intentionally tracked for reproducibility.
+
+# LibreOffice lock/temp files
+~$*
+*.html

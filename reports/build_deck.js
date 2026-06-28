@@ -337,6 +337,42 @@ async function build() {
     });
   }
 
+  // ---------- 9b. CLOSE-UP DEMO (one real query) ----------
+  {
+    const s = content("מבט מקרוב", "שאילתה אחת, שלושה מודלים");
+    card(s, 0.6, 1.7, 12.1, 1.15, INK);
+    T(s, [
+      { text: "השאילתה:  ", options: { color: TEALLT, bold: true } },
+      { text: "”פיטרו אותי מהעבודה, מה מגיע לי?“", options: { color: PAPER, bold: true } },
+    ], { x: 0.6, y: 1.82, w: 11.9, h: 0.5, fontFace: FH, fontSize: 19, align: "right", margin: 0.25 });
+    T(s, "מסמך הזהב: ”דמי אבטלה“ · ”זכאות לדמי אבטלה“", { x: 0.6, y: 2.34, w: 11.9, h: 0.4, fontFace: FB, fontSize: 13, italic: true, color: "CFE6E4", align: "right", margin: 0.25 });
+
+    // Right card — TF-IDF (lexical, fails)
+    card(s, 6.95, 3.05, 5.75, 2.6, MIST2);
+    iconChip(s, 11.95, 3.32, 0.62, ICN.tags.white, TEAL);
+    T(s, "TF-IDF · לקסיקלי", { x: 7.3, y: 3.38, w: 4.4, h: 0.4, fontFace: FH, fontSize: 16, bold: true, color: INKTX, align: "right", margin: 0, ltr: true });
+    const lex = ["זכאות לגמלת הבטחת הכנסה ובעלות על רכב", "ניכוי הכנסות מדמי אבטלה", "איסור ניכוי שכר מנער הנעדר מעבודתו…"];
+    lex.forEach((t, i) => T(s, `${i + 1}.  ${t}`, { x: 7.15, y: 4.0 + i * 0.42, w: 5.4, h: 0.4, fontFace: FB, fontSize: 12.5, color: MUTE, align: "right", margin: 0 }));
+    T(s, "✗  מסמך הזהב לא הופיע ב-top-10", { x: 7.15, y: 5.28, w: 5.4, h: 0.35, fontFace: FB, fontSize: 12, bold: true, color: "C2603A", align: "right", margin: 0 });
+
+    // Left card — AlephBERT (semantic, nails it)
+    card(s, 0.6, 3.05, 5.75, 2.6, MIST);
+    iconChip(s, 5.6, 3.32, 0.62, ICN.brain.white, TEAL);
+    T(s, "AlephBERT · סמנטי", { x: 0.95, y: 3.38, w: 4.4, h: 0.4, fontFace: FH, fontSize: 16, bold: true, color: INKTX, align: "right", margin: 0, ltr: true });
+    const sem = [["דמי אבטלה", true], ["דמי אבטלה בתקופת מלחמת חרבות ברזל", false], ["התפטרות בנסיבות המזכות בדמי אבטלה", false]];
+    sem.forEach(([t, gold], i) => T(s, `${i + 1}.  ${t}`, { x: 0.8, y: 4.0 + i * 0.42, w: 5.4, h: 0.4, fontFace: FB, fontSize: 12.5, bold: gold, color: gold ? TEAL : MUTE, align: "right", margin: 0 }));
+    T(s, "✓  מסמך הזהב במקום 1", { x: 0.8, y: 5.28, w: 5.4, h: 0.35, fontFace: FB, fontSize: 12, bold: true, color: TEAL, align: "right", margin: 0 });
+
+    // Bottom strip — gold-doc rank per model + takeaway
+    card(s, 0.6, 5.85, 12.1, 1.0, INK);
+    T(s, [
+      { text: "דירוג מסמך הזהב —  ", options: { color: PAPER, bold: true } },
+      { text: "TF-IDF: ✗   ·   AlephBERT: 1   ·   Hybrid-RRF: 4", options: { color: "CFE6E4" } },
+    ], { x: 0.6, y: 5.95, w: 11.9, h: 0.45, fontFace: FB, fontSize: 14, align: "right", margin: 0.25 });
+    T(s, "אפס מילים משותפות → הלקסיקלי מחמיץ, הסמנטי מגשר על פער הניסוח. ההיברידי אינו ראשון בכל שאלה — יתרונו הוא במצטבר על פני 40 השאלות.",
+      { x: 0.6, y: 6.42, w: 11.9, h: 0.4, fontFace: FB, fontSize: 12, italic: true, color: TEALLT, align: "right", margin: 0.25 });
+  }
+
   // ---------- 10. HYBRID + METRICS ----------
   {
     const s = content("איך משלבים ומודדים", "שילוב היברידי והמדדים");

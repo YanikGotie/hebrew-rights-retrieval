@@ -60,8 +60,8 @@ src/
   visualize.py            # 4 figures
   run_all.py              # end-to-end orchestrator
 notebooks/
-  NLP_Project.ipynb           # clean, Colab-ready
-  NLP_Project_Collab_RUN.ipynb# executed run with outputs
+  NLP_Project.ipynb              # clean, Colab-ready source
+  NLP_Project_collab_run2.ipynb  # executed Colab run with outputs
 data/{raw,processed}/     # cached pulls + corpus + eval set
 results/                  # metrics.csv, per_query.csv, error_analysis.md, figures/
 reports/                  # report.md (≤5 pp) + presentation.pptx
